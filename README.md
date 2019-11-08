@@ -16,7 +16,7 @@ In two words you have to travel ants through the rooms from start to end. Only o
   * There are maps with sometimes more than 10,000 lines, the way you read and write data must also be fairly fast.
   * Finally, your algorithm should be able to use the best combination of paths according to the number of ants.
   
-### About lem-in
+## Input
 
 * At the beginning from standart output the program recieves information. Here is an example:
 
@@ -61,4 +61,34 @@ In two words you have to travel ants through the rooms from start to end. Only o
   
 The rooms names won't necessarily be numbers, and they won't necessarily be in the right and continuous order. But most importantly, a room will never start with the character L nor the character #. The rooms coordinates will always be integers.
 Lines that start with ## are commands modifying the properties of the line that comes right after. For example, ##start signals the ant farm's entrance and ##end its exit.
+
+## Output
+L[ant]-[room]
+
+```
+~~~~~~~~~~~~~~~~~~~
+Total paths     2
+Total ants     10
+Active paths    2
+
+Path  1, Length  3, Amount of ants  6
+Path  2, Length  4, Amount of ants  4
+
+Steps           8
+
+~~~~~~~~~~~~~~~~~~~
+1.      1 [ 0] -> 3[ 2] -> 4[ 3] -> 0[ 7]
+len of PATH: [3]
+2.      1 [ 0] -> 2[ 1] -> 7[ 6] -> 6[ 5] -> 0[ 7]
+len of PATH: [4]
+~~~~~~~~~~~~~~~~~~~
+L2-2 L1-3                                   // Turn 1: ant number 1 go to room 3. Ant number 2 go to room 3
+L4-2 L3-3 L2-7 L1-4 
+L6-2 L5-3 L4-7 L3-4 L2-6 L1-0 
+L8-2 L7-3 L6-7 L5-4 L4-6 L3-0 L2-0 
+L9-3 L8-7 L7-4 L6-6 L5-0 L4-0 
+L10-3 L9-4 L8-6 L7-0 L6-0 
+L10-4 L9-0 L8-0 
+L10-0 
+```
 
