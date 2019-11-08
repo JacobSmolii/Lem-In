@@ -9,6 +9,8 @@ In two words you have to travel ants through the rooms from start to end. Only o
   * The project must be written in C language. 
   * Each ant may move one room per turn. 
   * Only one ant may occupy a room at a time expect for start and end.
+  * Any non compliant or empty lines will automatically stop the ant farm's reading as well as the orderly processing of the     acquired data.
+  * If there isn't enough data to process normally you must display ERROR.
   * Minimize the number of turns required to move all ants from start to end.
   * Algorithm must render within a reasonable time, even in a case with 4000 rooms more. 2 or 3 seconds is great, 9 seconds is      mediocre, 15 seconds is too much.
   * There are maps with sometimes more than 10,000 lines, the way you read and write data must also be fairly fast.
@@ -16,9 +18,7 @@ In two words you have to travel ants through the rooms from start to end. Only o
   
 ### About lem-in
 
-At the beginning from standart output the program recieves information:
-
-//about number of ants had to be leaded through path, room names (can be numbers, words, character etc.) with //coordinates(for vizualizer) and links. Here is an example:
+* At the beginning from standart output the program recieves information. Here is an example:
 
 ```
 10                  // Ants number
@@ -49,7 +49,14 @@ At the beginning from standart output the program recieves information:
 #another comment
 ```
 
-Which corresponds to the following representation:
+* Which corresponds to the following representation:
 
 ![alt text](https://user-images.githubusercontent.com/45500862/68441139-0c2eee80-0182-11ea-90ff-9907b2f55b14.png)
+
+* There are two parts:
+  1) The rooms, which are define by: name coord_x coord_y
+  2) The links, which are define by: name1-name2
+  3) All of it is broken by comments, which start with #
+The rooms names won't necessarily be numbers, and they won't necessarily be in the right and continuous order. But most importantly, a room will never start with the character L nor the character #. The rooms coordinates will always be integers.
+Lines that start with ## are commands modifying the properties of the line that comes right after. For example, ##start signals the ant farm's entrance and ##end its exit.
 
