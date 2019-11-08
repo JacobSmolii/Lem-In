@@ -16,7 +16,9 @@ In two words you have to travel ants through the rooms from start to end. Only o
   
 ### About lem-in
 
-At the beginning from standart output the program recieves information about number of ants had to be leaded through path, room names (can be numbers, words, character etc.) with coordinates(for vizualizer) and links. Here is an example:
+At the beginning from standart output the program recieves information:
+
+//about number of ants had to be leaded through path, room names (can be numbers, words, character etc.) with //coordinates(for vizualizer) and links. Here is an example:
 
 ```
 10                  // Ants number
@@ -47,4 +49,7 @@ At the beginning from standart output the program recieves information about num
 #another comment
 ```
 
+Which corresponds to the following representation:
+
+![alt text](https://user-images.githubusercontent.com/45500862/68441139-0c2eee80-0182-11ea-90ff-9907b2f55b14.png)
 
