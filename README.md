@@ -55,9 +55,9 @@ In two words you have to travel ants through the rooms from start to end. Only o
 
 * There are two parts:
 
-  The rooms, which are define by: name coord_x coord_y
-  The links, which are define by: name1-name2
-  All of it is broken by comments, which start with '#'
+  A) The rooms, which are define by: name coord_x coord_y <br />
+  B) The links, which are define by: name1-name2 <br />
+  C) All of it is broken by comments, which start with '#' <br />
   
 The rooms names won't necessarily be numbers, and they won't necessarily be in the right and continuous order. But most importantly, a room will never start with the character L nor the character #. The rooms coordinates will always be integers.
 Lines that start with ## are commands modifying the properties of the line that comes right after. For example, ##start signals the ant farm's entrance and ##end its exit.
