@@ -6,7 +6,8 @@ We need to make an ant farm, with tunnels and rooms. We place the ants on one si
 In two words you have to travel ants through the rooms from start to end. Only one ant per room is allowed, expect in start and end. The Goal is to send the ants in the shortest number of shots by finding the parallel paths.
 
 ## Rules
-  * The project must be written in C language. 
+  * The project must be written in C language.
+  * All the function must be less or equal 25 lines.
   * Each ant may move one room per step. 
   * Only one ant may occupy a room at a time expect for start and end.
   * Any non compliant or empty lines will automatically stop the ant farm's reading as well as the orderly processing of the     acquired data.
@@ -60,7 +61,7 @@ In two words you have to travel ants through the rooms from start to end. Only o
   C) All of it is broken by comments, which start with '#' <br />
   
 The rooms names won't necessarily be numbers, and they won't necessarily be in the right and continuous order. But most importantly, a room will never start with the character L nor the character #. The rooms coordinates will always be integers.
-Lines that start with ## are commands modifying the properties of the line that comes right after. For example, ##start signals the ant farm's entrance and ##end its exit.
+Lines that start with '##' are commands modifying the properties of the line that comes right after. For example, '##start' signals the ant farm's entrance and '##end' its exit.
 
 ## Output
 L[ant]-[room]
@@ -81,6 +82,7 @@ Steps           8
 len of PATH: [3]
 2.      1 [ 0] -> 2[ 1] -> 7[ 6] -> 6[ 5] -> 0[ 7]
 len of PATH: [4]
+
 ~~~~~~~~~~~~~~~~~~~
 L2-2 L1-3                                   // Step 1: ant number 1 go to room 3. Ant number 2 go to room 3
 L4-2 L3-3 L2-7 L1-4 
@@ -91,4 +93,17 @@ L10-3 L9-4 L8-6 L7-0 L6-0
 L10-4 L9-0 L8-0 
 L10-0 
 ```
+
+So in the output you can see how many parallel paths I found from the input. You can see exactly the whole path from the start to the end and below are information about the each step and each ant.
+
+## Installation and usage
+ Simply clone repository and run following commands:
+ ```
+ make
+ ./lem-in < tests/simple_1.txt .      // or any other map you want. Try test_big_superposition.txt (the biggest map with 10000 lines of input)
+ ```
+
+## Solving a task
+There are a lot of possible ways and algorithms to solve the task. One of them is Breadth First Search or BFS for a Graph. As soon as the program got required information and validated it, I store all of the room names in the `struct s_rooms`
+
 
