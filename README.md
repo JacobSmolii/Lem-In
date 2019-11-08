@@ -104,6 +104,20 @@ So in the output you can see how many parallel paths I found from the input. You
  ```
 
 ## Solving a task
-There are a lot of possible ways and algorithms to solve the task. One of them is Breadth First Search or BFS for a Graph. As soon as the program got required information and validated it, I store all of the room names in the `struct s_rooms`
+There are a lot of possible ways and algorithms to solve the task. One of them is Breadth First Search or BFS for a Graph. As soon as the program got required information and validated it, I store all of the room names inside the linked list in the `struct s_rooms`. Than I parse the connection between the rooms and store them inside the linked list in `struct	s_links`. <br />
+ After that I create the graph using the Adjacency List method using `struct	s_adjlist` and `struct	s_adjlistnode` in `struct	s_graph`, size of the array is equal to the number of vertices.
+ 
+ ```
+ graph
+
+     1 [ 0]     -> 2[ 1] -> 3[ 2]
+     2 [ 1]     -> 5[ 4] -> 4[ 3] -> 7[ 6] -> 1[ 0]
+     3 [ 2]     -> 1[ 0] -> 4[ 3] -> 5[ 4]
+     4 [ 3]     -> 0[ 7] -> 7[ 6] -> 3[ 2] -> 2[ 1]
+     5 [ 4]     -> 3[ 2] -> 6[ 5] -> 2[ 1]
+     6 [ 5]     -> 0[ 7] -> 7[ 6] -> 5[ 4]
+     7 [ 6]     -> 6[ 5] -> 2[ 1] -> 4[ 3]
+     0 [ 7]     -> 4[ 3] -> 6[ 5]
+ ```
 
 
