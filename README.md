@@ -54,6 +54,7 @@ In two words you have to travel ants through the rooms from start to end. Only o
 ![alt text](https://user-images.githubusercontent.com/45500862/68441139-0c2eee80-0182-11ea-90ff-9907b2f55b14.png)
 
 * There are two parts:
+
   The rooms, which are define by: name coord_x coord_y
   The links, which are define by: name1-name2
   All of it is broken by comments, which start with '#'
