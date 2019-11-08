@@ -7,7 +7,7 @@ In two words you have to travel ants through the rooms from start to end. Only o
 
 ## Rules
   * The project must be written in C language. 
-  * Each ant may move one room per turn. 
+  * Each ant may move one room per step. 
   * Only one ant may occupy a room at a time expect for start and end.
   * Any non compliant or empty lines will automatically stop the ant farm's reading as well as the orderly processing of the     acquired data.
   * If there isn't enough data to process normally you must display ERROR.
@@ -82,7 +82,7 @@ len of PATH: [3]
 2.      1 [ 0] -> 2[ 1] -> 7[ 6] -> 6[ 5] -> 0[ 7]
 len of PATH: [4]
 ~~~~~~~~~~~~~~~~~~~
-L2-2 L1-3                                   // Turn 1: ant number 1 go to room 3. Ant number 2 go to room 3
+L2-2 L1-3                                   // Step 1: ant number 1 go to room 3. Ant number 2 go to room 3
 L4-2 L3-3 L2-7 L1-4 
 L6-2 L5-3 L4-7 L3-4 L2-6 L1-0 
 L8-2 L7-3 L6-7 L5-4 L4-6 L3-0 L2-0 
